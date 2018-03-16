@@ -25,6 +25,9 @@ $font-list:
 
     // font transform
     @include fontTransform($type);
+
+    // font direction
+    @include fontAlign($type);
 }
 
 @mixin fontSize($size) {
@@ -59,6 +62,18 @@ $font-list:
 @mixin fontTransform($transform) {
     @if $transform == uppercase {
         text-transform: uppercase;
+    } @else if $transform == capitalize {
+        text-transform: capitalize;
+    } 
+}
+
+@mixin fontAlign($align) {
+    @if $align == right {
+        text-align: right;
+    } @else if $align == left {
+        text-align: left;
+    } @else if $align == center {
+        text-align: center;
     }
 }
 
