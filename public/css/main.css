@@ -1,0 +1,539 @@
+@media only screen and (min-width: 320px) {
+  .order-status {
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase; }
+  .detail.order-status {
+    font-size: 19px;
+    line-height: 29px;
+    text-transform: uppercase; }
+  .list.order-description {
+    font-size: 16px;
+    line-height: 22px; }
+  .detail.order-description {
+    font-size: 16px;
+    line-height: 22px; }
+  .detail.order-title {
+    font-size: 32px;
+    line-height: 40px; }
+  .detail.order-orderplaced {
+    font-size: 19px;
+    line-height: 29px; }
+  .address-map-heading {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: bold; }
+  .address-map-actual {
+    font-size: 19px;
+    line-height: 29px; }
+  .order-method-heading {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: bold; }
+  .order-method-actual {
+    font-size: 19px;
+    line-height: 29px; }
+  .payslip-item {
+    font-size: 19px;
+    line-height: 29px; }
+  .payslip-total {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: bold; }
+  .payslip-value {
+    font-size: 19px;
+    line-height: 29px;
+    text-align: right; }
+  .payslip-value-total {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: bold;
+    text-align: right; } }
+
+@media only screen and (min-width: 768px) {
+  .order-status {
+    font-size: 22px;
+    line-height: 32px;
+    text-transform: uppercase; }
+  .detail.order-status {
+    font-size: 19px;
+    line-height: 29px;
+    text-transform: uppercase; }
+  .list.order-description {
+    font-size: 19px;
+    line-height: 29px; }
+  .detail.order-description {
+    font-size: 19px;
+    line-height: 29px; }
+  .detail.order-title {
+    font-size: 32px;
+    line-height: 40px; }
+  .detail.order-orderplaced {
+    font-size: 19px;
+    line-height: 29px; }
+  .address-map-heading {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: bold; }
+  .address-map-actual {
+    font-size: 19px;
+    line-height: 29px; }
+  .order-method-heading {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: bold; }
+  .order-method-actual {
+    font-size: 19px;
+    line-height: 29px; }
+  .payslip-item {
+    font-size: 19px;
+    line-height: 29px; }
+  .payslip-total {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: bold; }
+  .payslip-value {
+    font-size: 19px;
+    line-height: 29px;
+    text-align: right; }
+  .payslip-value-total {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: bold;
+    text-align: right; } }
+
+@media only screen and (min-width: 1280px) {
+  .order-status {
+    font-size: 22px;
+    line-height: 32px;
+    text-transform: uppercase; }
+  .detail.order-status {
+    font-size: 22px;
+    line-height: 32px;
+    text-transform: uppercase; }
+  .list.order-description {
+    font-size: 22px;
+    line-height: 32px; }
+  .detail.order-description {
+    font-size: 22px;
+    line-height: 32px; }
+  .detail.order-title {
+    font-size: 32px;
+    line-height: 40px; }
+  .detail.order-orderplaced {
+    font-size: 19px;
+    line-height: 29px; }
+  .address-map-heading {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: bold; }
+  .address-map-actual {
+    font-size: 19px;
+    line-height: 29px; }
+  .order-method-heading {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: bold; }
+  .order-method-actual {
+    font-size: 19px;
+    line-height: 29px; }
+  .payslip-item {
+    font-size: 19px;
+    line-height: 29px; }
+  .payslip-total {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: bold; }
+  .payslip-value {
+    font-size: 19px;
+    line-height: 29px;
+    text-align: right; }
+  .payslip-value-total {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: bold;
+    text-align: right; } }
+
+/**
+ *
+ * colours
+ *
+ */
+/**
+  *
+  * greys
+  *
+  */
+/**
+  *
+  * tints - used for large areas
+  *
+  */
+/**
+  *
+  * information
+  *
+  */
+/**
+ * How to use
+ *
+ * .btn .btn-primary .btn-large
+ * .btn .btn-secondary .btn-small
+ */
+.btn {
+  display: inline-block;
+  width: 160px;
+  padding: 2px 10px;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer; }
+  .btn.btn-disabled {
+    cursor: not-allowed; }
+
+.btn.btn-small {
+  font-size: 16px; }
+
+.btn.btn-medium {
+  font-size: 19px; }
+
+.btn.btn-large {
+  font-size: 22px; }
+
+/**
+ * How to use
+ *
+ * .btn .btn-primary .btn-large
+ * .btn .btn-secondary .btn-small
+ */
+.btn.btn-primary {
+  background-color: #1B928E;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  color: #ffffff; }
+
+.btn.btn-secondary {
+  background-color: #ffffff;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #3E3E3E;
+  color: #3E3E3E; }
+
+.btn.btn-disabled {
+  background-color: #DFDFDF;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #AEAEAE;
+  color: #AEAEAE; }
+
+.btn.btn-tertiary {
+  background-color: #3E3E3E;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  color: snow; }
+
+.row * {
+  box-sizing: border-box; }
+
+.main {
+  background-color: #ffffff; }
+
+a {
+  color: #1B928E; }
+
+/**
+    * Grid base
+    *
+    * Col
+    * Row
+   */
+.row {
+  position: relative; }
+  .row:after {
+    display: block;
+    clear: both;
+    content: ''; }
+
+[class^="col-"] {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/**
+    * End Grid base
+   */
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: white; }
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: white; }
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: white; }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white; }
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white; }
+
+/**
+ *
+ * grid
+ */
+/*
+ * Padding, multiples of 4
+ *
+ * pad-top-4
+ * pad-bottom-4
+ */
+/*
+ * Padding, multiples of 4
+ *
+ * pad-top-4
+ * pad-bottom-4
+ */
+@media only screen and (min-width: 320px) {
+  [class^="col-"] {
+    margin: 0.8%; }
+  .row {
+    margin-left: -0.8%;
+    margin-right: -0.8%; }
+  .col-sm-1 {
+    width: 6.73333%; }
+  .col-sm-offset-1 {
+    margin-left: 8.33333%; }
+  .col-sm-pull-1 {
+    position: absolute;
+    right: 8.33333%; }
+  .col-sm-2 {
+    width: 15.06667%; }
+  .col-sm-offset-2 {
+    margin-left: 16.66667%; }
+  .col-sm-pull-2 {
+    position: absolute;
+    right: 16.66667%; }
+  .col-sm-3 {
+    width: 23.4%; }
+  .col-sm-offset-3 {
+    margin-left: 25%; }
+  .col-sm-pull-3 {
+    position: absolute;
+    right: 25%; }
+  .col-sm-4 {
+    width: 31.73333%; }
+  .col-sm-offset-4 {
+    margin-left: 33.33333%; }
+  .col-sm-pull-4 {
+    position: absolute;
+    right: 33.33333%; }
+  .col-sm-5 {
+    width: 40.06667%; }
+  .col-sm-offset-5 {
+    margin-left: 41.66667%; }
+  .col-sm-pull-5 {
+    position: absolute;
+    right: 41.66667%; }
+  .col-sm-6 {
+    width: 48.4%; }
+  .col-sm-offset-6 {
+    margin-left: 50%; }
+  .col-sm-pull-6 {
+    position: absolute;
+    right: 50%; }
+  .col-sm-7 {
+    width: 56.73333%; }
+  .col-sm-offset-7 {
+    margin-left: 58.33333%; }
+  .col-sm-pull-7 {
+    position: absolute;
+    right: 58.33333%; }
+  .col-sm-8 {
+    width: 65.06667%; }
+  .col-sm-offset-8 {
+    margin-left: 66.66667%; }
+  .col-sm-pull-8 {
+    position: absolute;
+    right: 66.66667%; }
+  .col-sm-9 {
+    width: 73.4%; }
+  .col-sm-offset-9 {
+    margin-left: 75%; }
+  .col-sm-pull-9 {
+    position: absolute;
+    right: 75%; }
+  .col-sm-10 {
+    width: 81.73333%; }
+  .col-sm-offset-10 {
+    margin-left: 83.33333%; }
+  .col-sm-pull-10 {
+    position: absolute;
+    right: 83.33333%; }
+  .col-sm-11 {
+    width: 90.06667%; }
+  .col-sm-offset-11 {
+    margin-left: 91.66667%; }
+  .col-sm-pull-11 {
+    position: absolute;
+    right: 91.66667%; }
+  .col-sm-12 {
+    width: 98.4%; }
+  .margin-top-4 {
+    margin-top: 3.2%; }
+  .margin-bottom-4 {
+    margin-bottom: 3.2%; }
+  .margin-4 {
+    margin: 3.2%; }
+  .margin-top-8 {
+    margin-top: 6.4%; }
+  .margin-bottom-8 {
+    margin-bottom: 6.4%; }
+  .margin-8 {
+    margin: 6.4%; }
+  .margin-top-12 {
+    margin-top: 9.6%; }
+  .margin-bottom-12 {
+    margin-bottom: 9.6%; }
+  .margin-12 {
+    margin: 9.6%; }
+  .margin-top-16 {
+    margin-top: 12.8%; }
+  .margin-bottom-16 {
+    margin-bottom: 12.8%; }
+  .margin-16 {
+    margin: 12.8%; }
+  .margin-top-20 {
+    margin-top: 16%; }
+  .margin-bottom-20 {
+    margin-bottom: 16%; }
+  .margin-20 {
+    margin: 16%; }
+  .margin-top-24 {
+    margin-top: 19.2%; }
+  .margin-bottom-24 {
+    margin-bottom: 19.2%; }
+  .margin-24 {
+    margin: 19.2%; }
+  .margin-top-28 {
+    margin-top: 22.4%; }
+  .margin-bottom-28 {
+    margin-bottom: 22.4%; }
+  .margin-28 {
+    margin: 22.4%; }
+  .margin-top-32 {
+    margin-top: 25.6%; }
+  .margin-bottom-32 {
+    margin-bottom: 25.6%; }
+  .margin-32 {
+    margin: 25.6%; }
+  .margin-top-36 {
+    margin-top: 28.8%; }
+  .margin-bottom-36 {
+    margin-bottom: 28.8%; }
+  .margin-36 {
+    margin: 28.8%; }
+  .padding-top-4 {
+    padding-top: 3.2%; }
+  .padding-bottom-4 {
+    padding-bottom: 3.2%; }
+  .padding-4 {
+    padding: 3.2%; }
+  .padding-top-8 {
+    padding-top: 6.4%; }
+  .padding-bottom-8 {
+    padding-bottom: 6.4%; }
+  .padding-8 {
+    padding: 6.4%; }
+  .padding-top-12 {
+    padding-top: 9.6%; }
+  .padding-bottom-12 {
+    padding-bottom: 9.6%; }
+  .padding-12 {
+    padding: 9.6%; }
+  .padding-top-16 {
+    padding-top: 12.8%; }
+  .padding-bottom-16 {
+    padding-bottom: 12.8%; }
+  .padding-16 {
+    padding: 12.8%; }
+  .padding-top-20 {
+    padding-top: 16%; }
+  .padding-bottom-20 {
+    padding-bottom: 16%; }
+  .padding-20 {
+    padding: 16%; }
+  .padding-top-24 {
+    padding-top: 19.2%; }
+  .padding-bottom-24 {
+    padding-bottom: 19.2%; }
+  .padding-24 {
+    padding: 19.2%; }
+  .padding-top-28 {
+    padding-top: 22.4%; }
+  .padding-bottom-28 {
+    padding-bottom: 22.4%; }
+  .padding-28 {
+    padding: 22.4%; }
+  .padding-top-32 {
+    padding-top: 25.6%; }
+  .padding-bottom-32 {
+    padding-bottom: 25.6%; }
+  .padding-32 {
+    padding: 25.6%; }
+  .padding-top-36 {
+    padding-top: 28.8%; }
+  .padding-bottom-36 {
+    padding-bottom: 28.8%; }
+  .padding-36 {
+    padding: 28.8%; } }
+
+/**
+ * How to use
+ *
+ * .jumbotron .jumbotron-primary
+ * .jumbotron .jumbotron-secondary
+ */
+.jumbotron.jumbotron-edge:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 16px solid transparent;
+  border-left: 16px solid #ffffff;
+  border-right: 16px solid #ffffff;
+  width: 96.5%;
+  height: 0; }
+
+.jumbotron.jumbotron-edge:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 16px solid transparent;
+  border-left: 16px solid #ffffff;
+  border-right: 16px solid #ffffff;
+  width: 96.5%;
+  height: 0; }
+
+.jumbotron.jumbotron-radius {
+  border-radius: 15px; }
+
+.jumbotron.jumbotron-cloud {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #DFE7F0; }
+
+.jumbotron.jumbotron-mercury {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #F0F0F0; }
