@@ -6,45 +6,45 @@
  */
 
  @mixin jumbotron($bgColor) {
-    position: relative;
-    width: 100%;
-    height: auto;
-    background-color: $bgColor;
-  }
-  
-  .jumbotron.jumbotron-edge {
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      border-bottom: 16px solid transparent;
-      border-left: 16px solid $snow;
-      border-right: 16px solid $snow;
-      width: 96.5%;
-      height: 0;
-    }
-  
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      border-top: 16px solid transparent;
-      border-left: 16px solid $snow;
-      border-right: 16px solid $snow;
-      width: 96.5%;
-      height: 0;
-    }
-  }
-  
-  .jumbotron.jumbotron-radius {
-    border-radius: 15px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: $bgColor;
+}
+
+.jumbotron.jumbotron-edge {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 16px solid transparent;
+    border-left: 16px solid $snow;
+    border-right: 16px solid $snow;
+    width: 96.5%;
+    height: 0;
   }
 
-  $jumboTronVariant: (cloud: $cloud, mercury: $mercury);
-  @each $name, $bgColour in $jumboTronVariant {
-    .jumbotron.jumbotron-#{$name} {
-        @include jumbotron($bgColour);
-      }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 16px solid transparent;
+    border-left: 16px solid $snow;
+    border-right: 16px solid $snow;
+    width: 96.5%;
+    height: 0;
   }
+}
+
+.jumbotron.jumbotron-radius {
+  border-radius: 15px;
+}
+
+$jumboTronVariant: (cloud: $cloud, mercury: $mercury);
+@each $name, $bgColour in $jumboTronVariant {
+  .jumbotron.jumbotron-#{$name} {
+      @include jumbotron($bgColour);
+    }
+}

@@ -1,114 +1,114 @@
-$font-list: 
-(order-status, global, ((xs, uppercase), (m, uppercase), (m, uppercase))),
-(order-status, detail, ((s, uppercase), (s, uppercase), (m, uppercase))),
-(order-description, list, ((xs), (s), (m))),
-(order-description, detail, ((xs), (s), (m))),
-(order-title, detail, ((xl), (xl), (xl))),
-(order-orderplaced, detail, ((s), (s), (s))),
-(address-map-heading, global, ((s, bold), (s, bold), (s, bold))),
-(address-map-actual, global, ((s), (s), (s))),
-(order-method-heading, global, ((s, bold), (s, bold), (s, bold))),
-(order-method-actual, global, ((s), (s), (s))),
-(payslip-item, global, ((s), (s), (s))),
-(payslip-total, global, ((s, bold), (s, bold), (s, bold))),
-(payslip-value, global, ((s, right), (s, right), (s,right))),
-(payslip-value-total, global, ((s, bold, right), (s, bold, right), (s, bold, right)));
-
+$font-list: (order-status, detail, ((xs, uppercase), (xs, uppercase), (s, uppercase))),
+        (order-status, list, ((s, uppercase), (s, uppercase), (m, uppercase))),
+        (order-description, list, ((xs), (s), (m))),
+        (order-description, detail, ((xs), (s), (m))),
+        (order-title, detail, ((l, bold), (l, bold), (l, bold))),
+        (order-orderplaced, detail, ((xs), (xs), (xs))),
+        (address-map-heading, global, ((xs, bold), (xs, bold), (xs, bold))),
+        (address-map-actual, global, ((xs), (xs), (xs))),
+        (order-method-heading, global, ((xs, bold, center), (xs, bold, center), (xs, bold, center))),
+        (order-method-actual, global, ((xs, center), (xs, center), (xs, center))),
+        (payslip-item, global, ((xs), (xs), (xs))),
+        (payslip-total, global, ((xs, bold), (xs, bold), (xs, bold))),
+        (payslip-value, global, ((xs, right), (xs, right), (xs, right))),
+        (payslip-value-total, global, ((xs, bold, right), (xs, bold, right), (xs, bold, right))),
+        (text-l-bold-center, global, ((s, bold, center), (m, bold, center), (m, bold, center)));
 
 // $typography: xl, l, m, s, xs;
 @mixin typography($type) {
-    // font size
-    @include fontSize($type);
+  // font size
+  @include fontSize($type);
 
-    // font weight
-    @include fontWeight($type);
+  // font weight
+  @include fontWeight($type);
 
-    // font transform
-    @include fontTransform($type);
+  // font transform
+  @include fontTransform($type);
 
-    // font direction
-    @include fontAlign($type);
+  // font direction
+  @include fontAlign($type);
 }
 
 @mixin fontSize($size) {
-    @if $size == xl {
-        font-size: 32px;
-        line-height: 40px;
-    } 
-    @if $size == l {
-        font-size: 26px;
-        line-height: 32px;
-    }
-    @if $size == m {
-        font-size: 22px;
-        line-height: 32px;
-    }
-    @if $size == s {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    @if $size == xs {
-        font-size: 16px;
-        line-height: 22px;
-    }
+  @if $size == xl {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  @if $size == l {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  @if $size == m {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  @if $size == s {
+    font-size: 19px;
+    line-height: 29px;
+  }
+  @if $size == xs {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 @mixin fontWeight($weight) {
-    @if $weight == bold {
-        font-weight: bold;
-    }
+  @if $weight == bold {
+    font-weight: bold;
+  }
 }
 
 @mixin fontTransform($transform) {
-    @if $transform == uppercase {
-        text-transform: uppercase;
-    } @else if $transform == capitalize {
-        text-transform: capitalize;
-    } 
+  @if $transform == uppercase {
+    text-transform: uppercase;
+    color: $steel;
+  } @else if $transform == capitalize {
+    text-transform: capitalize;
+  }
 }
 
 @mixin fontAlign($align) {
-    @if $align == right {
-        text-align: right;
-    } @else if $align == left {
-        text-align: left;
-    } @else if $align == center {
-        text-align: center;
-    }
+  @if $align == right {
+    text-align: right;
+  } @else if $align == left {
+    text-align: left;
+  } @else if $align == center {
+    text-align: center;
+  }
 }
 
-@mixin extractByGridSize($grid) { 
-    @each $typo in $grid {
-        @include typography($typo);
-    }
+@mixin extractByGridSize($grid) {
+  @each $typo in $grid {
+    @include typography($typo);
+  }
 }
 
 @mixin createClassList($gridindex) {
-    @each $name, $scope, $grid in $font-list {
-        $scopeStr: $name;
+  @each $name, $scope, $grid in $font-list {
+    $scopeStr: $name;
 
-        @if $scope != global {
-            .#{$scope} {
-                &.#{$name} {
-                    @include extractByGridSize(nth($grid, $gridindex));
-                }
-            }
-        } @else {
-            .#{$name} {
-                @include extractByGridSize(nth($grid, $gridindex));
-            }
+    @if $scope != global {
+      .#{$scope} {
+        .#{$name} {
+          @include extractByGridSize(nth($grid, $gridindex));
         }
+      }
+    } @else {
+      .#{$name} {
+        @include extractByGridSize(nth($grid, $gridindex));
+      }
     }
+  }
 }
 
-@include grid360 {
-    @include createClassList(1);
-}
+
+@include createClassList(1);
+
 
 @include grid768 {
-    @include createClassList(2);
+  @include createClassList(2);
 }
 
 @include grid1280 {
-    @include createClassList(3);
+  @include createClassList(3);
 }

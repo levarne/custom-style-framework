@@ -13,36 +13,50 @@
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
-
+  
     &.btn-disabled {
-        cursor: not-allowed;
+      cursor: not-allowed;
+    }
+  
+    &:first-child {
+      margin-right: 4px;
+    }
+  
+    &:last-child {
+      margin-left: 4px;
+    }
+  
+    @include grid360 {
+      width: 140px;
     }
   }
-
+  
   $btnSizeVariant: (small: 16px, medium: 19px, large: 22px);
   @each $btn, $size in $btnSizeVariant {
     .btn.btn-#{$btn} {
-        font-size: $size;
+      font-size: $size;
     }
   }
-
-/**
- * How to use
- *
- * .btn .btn-primary .btn-large
- * .btn .btn-secondary .btn-small
- */
-  $btnColourVariant: (primary, $snow, $teal, transparent), 
-                    (secondary, $tungsten, $snow, $tungsten), 
-                    (disabled, $steel, $silver, $steel), 
-                    (tertiary, snow, $tungsten, transparent);
-
-@each $name, $colour, $bgColour, $borderColour in $btnColourVariant {
+  
+  /**
+   * How to use
+   *
+   * .btn .btn-primary .btn-large
+   * .btn .btn-secondary .btn-small
+   */
+  $btnColourVariant: (primary, bold, $snow, $teal, transparent),
+          (secondary, normal, $tungsten, $snow, $tungsten),
+          (disabled, normal, $steel,  $silver, $steel),
+          (tertiary, normal, snow,  $tungsten, transparent);
+  
+  @each $name, $fontWeight, $colour, $bgColour, $borderColour in $btnColourVariant {
     .btn.btn-#{$name} {
-        background-color: $bgColour;
-        border-style: solid;
-        border-width: 1px;
-        border-color: $borderColour;
-        color: $colour;
-      }
-}
+      background-color: $bgColour;
+      border-style: solid;
+      border-width: 1px;
+      border-color: $borderColour;
+      color: $colour;
+      font-weight: $fontWeight;
+    }
+  }
+  
