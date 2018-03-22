@@ -1,16 +1,16 @@
-.row * {
+.ux-config {
+  .row * {
     box-sizing: border-box;
   }
-  
+
   .main {
     background-color: $snow;
   }
-  
+
   a {
     color: $teal;
   }
-  
-  
+
   /**
     * Grid base
     *
@@ -19,41 +19,42 @@
    */
   .row {
     position: relative;
-  
+
     &:after {
       display: block;
       clear: both;
       content: '';
     }
   }
-  
+
   [class^="col-"] {
     float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  
+
   /**
     * End Grid base
    */
-  
+
   ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color: white;
   }
-  
+
   :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     color: white;
   }
-  
+
   ::-moz-placeholder { /* Mozilla Firefox 19+ */
     color: white;
   }
-  
+
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: white;
   }
-  
+
   ::-ms-input-placeholder { /* Microsoft Edge */
     color: white;
   }
+}

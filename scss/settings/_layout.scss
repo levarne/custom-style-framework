@@ -6,86 +6,121 @@ $grid-spacing: 8;
  *
  * grid
  */
-  @mixin grid($name, $columns, $gutter) {
-    @for $index from 1 through $columns {
-        .#{$name}-#{$index} {
-            width: (percentage(($index / $columns)) - $gutter);  
-        }
+@mixin grid($name, $columns, $gutter) {
+  @for $index from 1 through $columns {
+    .#{$name}-#{$index} {
+      width: (percentage(($index / $columns)) - $gutter);
+    }
 
-        @if $index < $columns {
-            // offset classes
-            .#{$name}-offset-#{$index} {
-                margin-left: percentage( ($index / $columns) );
-            }
+    @if $index < $columns {
+      // offset classes
+      .#{$name}-offset-#{$index} {
+        margin-left: percentage(($index / $columns));
+      }
 
-            .#{$name}-pull-#{$index} {
-                position: absolute;
-                right: percentage( ($index / $columns) );
-            }
-        }
+      .#{$name}-pull-#{$index} {
+        position: absolute;
+        right: percentage(($index / $columns));
+      }
     }
   }
+}
 
- /*
- * Padding, multiples of 4
- *
- * pad-top-4
- * pad-bottom-4
- */
- @mixin padding($col-padding, $increment: 4) {
-    @for $index from 1 through 9 {
-        $pad: ($index * $increment);
-        $padding: ($col-padding * $index) * $increment;
+/*
+* Padding, multiples of 4
+*
+* padding-top-4
+* padding-bottom-4
+* padding-4
+*/
+@mixin padding($col-padding, $increment: 4) {
+  @for $index from 1 through 9 {
+    $pad: ($index * $increment);
+    $padding: ($col-padding * $index) * $increment;
 
-        .padding-top-#{$pad} {
-            padding-top: $padding;
-        }
-        .padding-bottom-#{$pad} {
-            padding-bottom: $padding;
-        }
-        .padding-#{$pad} {
-            padding: $padding;
-        }
+    .padding-top-#{$pad} {
+      padding-top: $padding;
     }
- }
-
- /*
- * Padding, multiples of 4
- *
- * pad-top-4
- * pad-bottom-4
- */
- @mixin margin($col-margin, $increment: 4) {
-    @for $index from 1 through 9 {
-        $multiple: ($index * $increment);
-        $margin: ($col-margin * $index) * $increment;
-
-        .margin-top-#{$multiple} {
-            margin-top: $margin;
-        }
-        .margin-bottom-#{$multiple} {
-            margin-bottom: $margin;
-        }
-        .margin-#{$multiple} {
-            margin: $margin;
-        }
+    .padding-bottom-#{$pad} {
+      padding-bottom: $padding;
     }
- }
-
-  @include grid360 {
-    $margin: ($grid-spacing / 10) * 1%;
-
-    [class^="col-"] {
-        margin: $margin;
+    .padding-#{$pad} {
+      padding: $padding;
     }
-      
-    .row {
-        margin-left: -$margin;
-        margin-right: -$margin;
-    }
+  }
+}
 
-    @include grid(col-sm, $grid, ($grid-spacing / 10) * 2);
-    @include margin($margin);
-    @include padding($margin);
-  };
-  
+/*
+* Margin, multiples of 4
+*
+* margin-top-4
+* margin-bottom-4
+* margin-4
+*/
+@mixin margin($col-margin, $increment: 4) {
+  @for $index from 1 through 9 {
+    $multiple: ($index * $increment);
+    $margin: ($col-margin * $index) * $increment;
+
+    .margin-top-#{$multiple} {
+      margin-top: $margin;
+    }
+    .margin-bottom-#{$multiple} {
+      margin-bottom: $margin;
+    }
+    .margin-#{$multiple} {
+      margin: $margin;
+    }
+  }
+}
+
+@include grid360 {
+  $margin: ($grid-spacing / 10) * 1%;
+
+  [class^="col-"] {
+    margin: $margin;
+  }
+
+  .row {
+    margin-left: -$margin;
+    margin-right: -$margin;
+  }
+
+  @include grid(col-sm, $grid, ($grid-spacing / 10) * 2);
+  @include margin($margin);
+  @include padding($margin);
+}
+
+@include grid768 {
+  $margin: (($grid-spacing / 2) / 10) * 1%;
+
+  [class^="col-"] {
+    margin: $margin;
+  }
+
+  .row {
+    margin-left: -$margin;
+    margin-right: -$margin;
+  }
+
+  @include grid(col-md, $grid, ($grid-spacing / 10));
+  @include margin($margin);
+  @include padding($margin);
+}
+
+@include grid1280 {
+  $margin: (($grid-spacing / 2) / 10) * 1%;
+
+  [class^="col-"] {
+    margin: $margin;
+  }
+
+  .row {
+    margin-left: -$margin;
+    margin-right: -$margin;
+  }
+
+  @include grid(col-lg, $grid, ($grid-spacing / 10));
+  @include margin($margin);
+  @include padding($margin);
+}
